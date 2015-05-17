@@ -6,7 +6,7 @@ Xcodeから使用するプロジェクト名を選択し、TARGETSで該当タ�
 さらにBuild Settingsを選択し、Swift CompilerのOther Swift FlagsでDebug = -DDEBUGとなるようにしてください。
 #### 2.GlobalConstants.swift追加
 ファイル名は何でも良いのですが、ここではGlobalConstants.swiftというファイルを作成し、下記のような定義を追加します。
-```swift
+```swift:GlobalConstants.swift
 #if DEBUG
     func LOG(msg:Any) {
     println(msg)
@@ -26,16 +26,25 @@ Xcodeから使用するプロジェクト名を選択し、TARGETSで該当タ�
 
 ``` swift
     override func viewDidLoad() {
-        LOG_METHOD() // メソッド名と行数を出力します
         super.viewDidLoad()
+        LOG_METHOD() // メソッド名と行数を出力します
         // Do any additional setup after loading the view, typically from a nib.
     }
     
     override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
         LOG_METHOD() // メソッド名と行数を出力します
         LOG(animated) // 任意のパラメータを出力します
-        super.viewDidAppear(animated)
     }
 ```
 
+コンソールにこのように出力されます。
+``` Bash:コンソール出力
+(viewDidLoad(), 14)
+(viewDidAppear, 20)
+false
+```
+
 Objective-Cで使っていたLOG,LOG_METHODと同じように使えると思います。
+
+
