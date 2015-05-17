@@ -11,19 +11,20 @@ import UIKit
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
-        LOG_METHOD()
         super.viewDidLoad()
+        LOG_METHOD()
         // Do any additional setup after loading the view, typically from a nib.
     }
     
     override func viewDidAppear(animated: Bool) {
-        LOG_METHOD()
         super.viewDidAppear(animated)
+        LOG_METHOD()
+        LOG(animated)
     }
 
     override func didReceiveMemoryWarning() {
-        LOG_METHOD()
         super.didReceiveMemoryWarning()
+        LOG_METHOD()
         // Dispose of any resources that can be recreated.
     }
 
