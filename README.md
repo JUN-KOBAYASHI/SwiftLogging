@@ -9,10 +9,10 @@ Xcodeから使用するプロジェクト名を選択し、TARGETSで該当タ�
 ```swift:GlobalConstants.swift
 #if DEBUG
     func LOG(msg:Any) {
-    println(msg)
+        println(msg)
     }
     func LOG_METHOD(funcName:String = __FUNCTION__,lineNum:Int = __LINE__ ){
-    println("\(funcName)","\(lineNum)")
+        println("\(funcName)","\(lineNum)")
     }
     
 #else
