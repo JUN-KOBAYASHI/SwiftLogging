@@ -1,5 +1,9 @@
 # SwiftLogging
 Objective-Cで使っていたLOGやLOG_METHODといったマクロをSwiftでも同様に使いたかったので作りました。
+## 環境
+* Xcode 6.3.1
+* Swift 1.2
+
 ## 準備
 #### 1.XcodeのBuild Settings
 Xcodeから使用するプロジェクト名を選択し、TARGETSで該当ターゲットを選択します。
