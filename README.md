@@ -23,6 +23,7 @@ Xcodeから使用するプロジェクト名を選択し、TARGETSで該当タ�
 これで、Build ConfigurationがDebugに設定しているときだけ、任意の場所にLOG()やLOG_METHOD()を記述しておくとコンソールにログが出力されます。
 
 ## 使い方
+Objective-Cで使っていたLOG,LOG_METHODと同じように使えると思います。
 
 ``` swift
     override func viewDidLoad() {
@@ -45,6 +46,6 @@ Xcodeから使用するプロジェクト名を選択し、TARGETSで該当タ�
 false
 ```
 
-Objective-Cで使っていたLOG,LOG_METHODと同じように使えると思います。
+
 
 
