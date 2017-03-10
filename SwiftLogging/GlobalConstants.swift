@@ -8,13 +8,13 @@
 
 #if DEBUG
     func LOG(msg:Any) {
-    println(msg)
+    print(msg)
     }
-    func LOG_METHOD(funcName:String = __FUNCTION__,lineNum:Int = __LINE__ ){
-    println("\(funcName)","\(lineNum)")
+    func LOG_METHOD(funcName:String = #function,lineNum:Int = #line ){
+    print("\(funcName)","\(lineNum)")
     }
     
 #else
-    func LOG(msg:Any) {}
+    func LOG(_ msg:Any) {}
     func LOG_METHOD() {}
 #endif
